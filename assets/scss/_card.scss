@@ -1,0 +1,87 @@
+.card {
+    background: var(--color-regular);
+    border-radius: 10px;
+    display: flex;
+    padding: var(--size-md);
+    flex-direction: column;
+    gap: var(--size-sm);
+
+    @include md {
+        padding: var(--size-md);
+        gap: var(--size-md);
+    }
+
+    &--arrow {
+        &::after {
+            content: "";
+            display: block;
+            width: 24px;
+            min-width: 24px;
+            height: 24px;
+            min-height: 24px;
+            background: url("./images/arrow-mobile.svg") center / contain no-repeat;
+            margin-left: auto;
+        }
+
+        @include md {
+            &::after {
+                display: flex;
+
+                background: url("./images/arrow.svg") center / contain no-repeat;
+            }
+        }
+    }
+
+    &--row {
+        flex-direction: row;
+        @include md {
+            align-items: center;
+        }
+    }
+
+    &--padding-bottom {
+        padding-bottom: var(--size-xxl);
+    }
+
+    &--without-bg {
+        padding: 0;
+        background: rgba(0, 0, 0, 0);
+    }
+
+    &__label {
+        font-size: var(--size-xxs);
+        background: linear-gradient(135deg, #7cb9ff 0%, #2478f5 5%, #0067f4 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        display: inline;
+        font-weight: 800;
+        @include md {
+            font-size: var(--size-xs);
+        }
+    }
+
+    &__headline {
+        font-size: var(--size-sm);
+        font-weight: 800;
+
+        position: relative;
+        // line-height: 1;
+
+        // @media (min-width: $sm) {
+        //     font-size: var(--size-md);
+        // }
+        @include md {
+            font-size: var(--size-md);
+        }
+    }
+
+    &__text {
+        font-size: var(--size-xxs);
+        font-weight: 600;
+        color: var(--color-grey);
+        @include md {
+            font-size: var(--size-xs);
+        }
+    }
+}

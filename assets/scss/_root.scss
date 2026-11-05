@@ -1,0 +1,57 @@
+// брейкпоинты
+$xl: 1300px;
+$md: 1024px;
+$regular: 768px;
+$sm: 640px;
+$xs: 320px;
+
+:root {
+    --color-blue-main: #0064ff;
+    --color-blue-second: #0c2242;
+    --color-regular: #0b1628;
+    --color-grey: #8694b6;
+    --color-grey-light: #efefef;
+    --color-white: #fff;
+    --color-black: #000511;
+
+    --gradient-main: linear-gradient(297.49deg, #7cb9ff -82.72%, #2478f5 -45.53%, #1270f5 -27.16%, rgba(0, 0, 0, 0.83) 31.42%, #00275d 107.35%);
+
+    --gradient-second: linear-gradient(90deg, #195ee7 0%, #234c9d 100%);
+    --gradient-third: linear-gradient(90deg, #595959 0%, #1a2843 100%);
+
+    // --size-base: clamp(14px, calc((100vw + 100vh) * 0.01), 30px);
+
+    // --size-xxxxs: calc(var(--size-base) * 0.4);
+    // --size-xxxs: calc(var(--size-base) * 0.6);
+    // --size-xxs: calc(var(--size-base) * 0.8);
+    // --size-xs: calc(var(--size-base) * 1);
+    // --size-sm: calc(var(--size-base) * 1.2);
+    // --size-md: calc(var(--size-base) * 1.4);
+    // --size-lg: calc(var(--size-base) * 1.6);
+    // --size-xl: calc(var(--size-base) * 2);
+    // --size-xxl: calc(var(--size-base) * 2.5);
+    // --size-xxxl: calc(var(--size-base) * 5);
+
+    --size-xxxxs: clamp(10px, 0.45vw + 0.15vh, 12px);
+    --size-xxxs: clamp(12px, 0.55vw + 0.2vh, 14px);
+    --size-xxs: clamp(14px, 0.65vw + 0.25vh, 16px);
+    --size-xs: clamp(16px, 0.75vw + 0.3vh, 18px);
+    --size-sm: clamp(18px, 0.85vw + 0.35vh, 21px);
+    --size-md: clamp(21px, 1vw + 0.4vh, 25px);
+    --size-lg: clamp(25px, 1.2vw + 0.5vh, 32px);
+    --size-xl: clamp(32px, 1.5vw + 0.6vh, 42px);
+    --size-xxl: clamp(42px, 2vw + 0.8vh, 64px);
+    --size-xxxl: clamp(48px, 3.5vw + 1vh, 72px);
+
+    --radius-lg: 24px;
+    --radius-sm: 10px;
+
+    --lh-xl: 1.6;
+    --lh-lg: 1.4;
+    --lh-md: 1.2;
+
+    --max-size: 1440px;
+
+    --border-h-lg: 4px;
+    --border-h-md: 2px;
+}

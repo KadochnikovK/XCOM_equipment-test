@@ -1,0 +1,43 @@
+.stats {
+    padding-top: 0;
+    padding-bottom: 0;
+    background: var(--gradient-main);
+
+    &__content {
+        display: grid;
+        gap: var(--size-md);
+        padding: var(--size-md);
+
+        @include md {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    &__headline {
+        font-size: var(--size-sm);
+        line-height: 1.25;
+
+        font-weight: 800;
+
+        @include md {
+            font-size: var(--size-lg);
+        }
+    }
+
+    &__text {
+        color: var(--color-grey);
+        font-size: var(--size-xxs);
+
+        font-weight: 600;
+
+        @include md {
+            font-size: var(--size-xs);
+        }
+    }
+}

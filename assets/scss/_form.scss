@@ -1,0 +1,125 @@
+.form {
+    display: grid;
+
+    align-items: end;
+    gap: 30px;
+    width: 100%;
+    padding: clamp(20px, 4vw, 48px);
+    background: var(--color-blue-second);
+    border-radius: 10px;
+
+    @include md {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    &__headline {
+        font-size: var(--size-xl);
+    }
+
+    &__intro {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 24px;
+        height: 100%;
+    }
+
+    &__privacy {
+        max-width: 370px;
+        color: var(--color-grey);
+        font-size: 11px;
+    }
+
+    &__fields {
+        display: flex;
+        flex-direction: column;
+        gap: var(--size-xs);
+    }
+
+    &__item {
+        display: block;
+        position: relative;
+        margin: 0;
+    }
+
+    &__input {
+        width: 100%;
+        min-height: 40px;
+
+        border: 1px solid #50627c;
+        border-radius: 10px;
+        padding: var(--size-xs);
+        color: var(--color-white);
+        background: #0b1628;
+        font-size: var(--size-xs);
+
+        &::placeholder {
+            color: #8694b6;
+        }
+    }
+
+    &__label {
+        font-size: var(--size-xs);
+        margin-bottom: var(--size-xs);
+    }
+
+    &__checkbox {
+        position: absolute;
+        opacity: 0;
+        left: 0;
+
+        & + label {
+            position: relative;
+            cursor: pointer;
+            padding: 0;
+            font-size: var(--size-xxs);
+            font-weight: 500;
+
+            &:before {
+                content: "";
+                position: absolute;
+                left: -30px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 20px;
+                height: 20px;
+                border: 1px solid var(--color-white);
+                border-radius: 50%;
+            }
+        }
+
+        &:checked + label:after {
+            content: "";
+            position: absolute;
+            left: -25px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 10px;
+            height: 10px;
+            background: var(--color-white);
+            border-radius: 50%;
+        }
+
+        &:focus + label:before {
+            box-shadow: 0 0 0 2px var(--color-regular);
+        }
+    }
+
+    .button {
+        width: 100%;
+        max-width: none;
+        min-height: 40px;
+    }
+
+    .headgroup__headline {
+        font-size: clamp(24px, 2.2vw, 32px);
+    }
+
+    .error-message {
+        position: absolute;
+        top: 92%;
+        color: #ff0000;
+        font-size: var(--size-sm);
+        margin-top: 5px;
+    }
+}

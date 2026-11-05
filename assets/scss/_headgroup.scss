@@ -1,0 +1,53 @@
+@import "./root";
+
+.headgroup {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-md);
+    font-weight: 700;
+
+    * {
+        font-weight: 700;
+    }
+
+    &__label {
+        font-size: var(--size-xs);
+        background: linear-gradient(135deg, #7cb9ff 0%, #2478f5 5%, #0067f4 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        display: inline;
+        font-weight: 800;
+
+        @include md {
+            font-size: var(--size-sm);
+        }
+    }
+
+    &__headline {
+        font-size: var(--size-xxl);
+        font-weight: 800;
+
+        position: relative;
+        line-height: 1.1;
+
+        @include md {
+            font-size: var(--size-xxxl);
+        }
+
+        // @media (min-width: $sm) {
+        //     font-size: var(--size-md);
+        // }
+    }
+
+    &__text {
+        font-size: var(--size-sm);
+        font-weight: 600;
+        color: var(--color-grey);
+
+        @include md {
+            font-size: var(--size-md);
+            // max-width: 50%;
+        }
+    }
+}

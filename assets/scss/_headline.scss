@@ -1,0 +1,37 @@
+.headline {
+    font-size: var(--size-xxxl);
+    font-weight: 800;
+    // color: var(--color-blue-main);
+    position: relative;
+    line-height: 1;
+
+
+    &--size-sm {
+        margin-bottom: 30px;
+    }
+
+    &--light {
+        color: var(--color-white)
+    }
+
+    &--center::after {
+        text-align: center;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &-lable {
+
+        font-size: var(--size-sm);
+
+
+
+        background: linear-gradient(135deg, #7CB9FF 0%, #2478F5 5%, #0067F4 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        display: inline;
+
+
+    }
+}
