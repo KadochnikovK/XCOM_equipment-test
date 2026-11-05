@@ -31,6 +31,16 @@
         position: relative;
         line-height: 1.1;
 
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        hyphens: auto;
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+
+        word-break: break-word;
+        line-break: auto;
+
         @include md {
             font-size: var(--size-xxxl);
         }
